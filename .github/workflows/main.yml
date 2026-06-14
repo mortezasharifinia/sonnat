@@ -25,11 +25,11 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: '24'
-          cache: 'bun' # Adjust caching strategy and configuration if using other package managers
+          cache: 'pnpm' # Adjust caching strategy and configuration if using other package managers
       - name: Install dependencies
-        run: bun ci # Replace with appropriate command if using other package managers
+        run: pnpm ci # Replace with appropriate command if using other package managers
       - name: Build Storybook
-        run: bun run build-storybook
+        run: pnpm run build-storybook
       # Upload pages artifact
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
